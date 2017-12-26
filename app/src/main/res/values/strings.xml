@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Plates</string>
+    <string name="enter_weight">Enter Weight:</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="hint">e.g. 135</string>
+    <string name="weight_plates">Weight of Plates (per side)</string>
+    <string name="lbs">lbs</string>
+    <string name="lb45">45 lb</string>
+    <string name="lb35">35 lb</string>
+    <string name="lb25">25 lb</string>
+    <string name="lb10">10 lb</string>
+    <string name="lb5">5 lb</string>
+    <string name="lb2">2.5 lb</string>
+</resources>

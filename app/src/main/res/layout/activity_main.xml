@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="janlouisevangelista.plates.MainActivity"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/gym_bg"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="320dp"
+            android:layout_height="160dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/colorPrimaryOpacity"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/weightText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="24sp"
+                    android:text="@string/enter_weight"
+                    />
+
+                <EditText
+                    android:id="@+id/plateWeight"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:hint="@string/hint"
+                    />
+
+                <Button
+                    android:id="@+id/calcButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="calculateValues"
+                    android:text="@string/calculate" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="320dp"
+            android:layout_height="280dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/colorPrimaryOpacity"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/weightOfPlateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight_plates"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/plateWeightVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:text="0.0"
+                        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbs"
+                        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="75dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lb45"
+                                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+                            <TextView
+                                android:id="@+id/plate45Val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="75dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lb35"
+                                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+                            <TextView
+                                android:id="@+id/plate35Val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="75dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lb25"
+                                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+                            <TextView
+                                android:id="@+id/plate25Val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="75dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lb10"
+                                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+                            <TextView
+                                android:id="@+id/plate10Val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="75dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lb5"
+                                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+                            <TextView
+                                android:id="@+id/plate5Val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAppearance="@android:style/TextAppearance.Material.Large"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="75dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lb2"
+                                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+                            <TextView
+                                android:id="@+id/plate2Val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>
